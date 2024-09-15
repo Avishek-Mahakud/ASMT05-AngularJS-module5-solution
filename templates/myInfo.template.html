@@ -1,0 +1,12 @@
+<div>
+    <h2>My Info</h2>
+    <div ng-if="myInfoCtrl.user">
+        <p>Name: {{myInfoCtrl.user.firstName}} {{myInfoCtrl.user.lastName}}</p>
+        <p>Email: {{myInfoCtrl.user.email}}</p>
+        <p>Phone: {{myInfoCtrl.user.phoneNumber}}</p>
+        <p>Favorite Menu Item: {{myInfoCtrl.user.favoriteMenuNumber}}</p>
+    </div>
+    <div ng-if="!myInfoCtrl.user">
+        <p ng-bind-html="myInfoCtrl.message"></p>
+    </div>
+</div>
